@@ -24,16 +24,9 @@
 
 <script>
 // @ is an alias to /src
-import { BContainer, BButton, BCol, BRow } from "bootstrap-vue";
 import { ref, computed, onMounted } from "@vue/composition-api";
 import { title, metaDescription, metaKeyword } from '../helper/header'
 export default {
-  components: {
-    BContainer,
-    BButton,
-    BCol,
-    BRow,
-  },
   setup(props, { root: { $store } }) {
     
     onMounted(function(){

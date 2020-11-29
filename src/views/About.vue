@@ -41,14 +41,10 @@
 </template>
 <script>
 import { title, metaDescription, metaKeyword } from "../helper/header";
-import { BContainer, BRow, BCol } from "bootstrap-vue";
 import ImageSlider from "../components/ImageSlider";
 import { onBeforeMount, computed, reactive } from "@vue/composition-api";
 export default {
   components: {
-    BContainer,
-    BRow,
-    BCol,
     ImageSlider,
   },
   setup(props, { root: { $store } }) {
