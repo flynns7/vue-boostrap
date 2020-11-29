@@ -25,7 +25,8 @@
 <script>
 // @ is an alias to /src
 import { BContainer, BButton, BCol, BRow } from "bootstrap-vue";
-import { ref, computed } from "@vue/composition-api";
+import { ref, computed, onMounted } from "@vue/composition-api";
+import { title, metaDescription, metaKeyword } from '../helper/header'
 export default {
   components: {
     BContainer,
@@ -34,6 +35,12 @@ export default {
     BRow,
   },
   setup(props, { root: { $store } }) {
+    
+    onMounted(function(){
+      title('Home')
+      metaDescription('This is about all')
+      metaKeyword("about, company, useful")
+    })
     const val = ref(0);
     const getFromState = computed(() => $store.getters["general/getValue"]);
     const counter = () => {

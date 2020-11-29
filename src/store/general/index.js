@@ -5,7 +5,9 @@ import actions from './actions'
 export default {
   namespaced: true,
   state: {
-    value : 1
+    value : 1,
+    loading:true,
+    data:[]
   },
   getters,
   mutations,
